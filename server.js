@@ -11,8 +11,10 @@ const app = express();
 // Middleweres
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(dotenv());
 
 // Route Middleweres
 app.use("/api/users", userRoute);
